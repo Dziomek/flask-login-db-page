@@ -9,6 +9,6 @@ def create_app():
     from .auth import auth
 
     app.register_blueprint(views, url_prefix='/') # informacja dla app jak dotrzec do blueprintow
-    app.register_blueprint(auth, url_prefix='/auth')
+    app.register_blueprint(auth, url_prefix='/')
 
     return app
