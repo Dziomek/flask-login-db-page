@@ -4,13 +4,9 @@ from . import db
 from .models import User, Note
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, login_required, logout_user, current_user
+from .models import Note
 
 auth = Blueprint('auth', __name__)  # Tworzenie blueprinta
-
-
-@auth.route('/')
-def home():
-    return "<h1>Test</h1>"
 
 
 @auth.route('/login', methods=['GET', 'POST'])  # aby dekorator obsługiwał żądania GET i POST
